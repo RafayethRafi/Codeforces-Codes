@@ -1,0 +1,44 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define optimize() ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+#define  endl '\n'
+int main()
+{
+    optimize();
+    int n,i,x,p,q,r,z;
+    cin>>n;
+    vector<int>a,b,c;
+
+     for(i=0;i<n;i++)
+     {
+         cin>>x;
+
+         if(x==1)
+            a.push_back(i+1);
+         else if(x==2)
+            b.push_back(i+1);
+         else
+            c.push_back(i+1);
+     }
+
+    p = a.size();
+    q = b.size();
+    r = c.size();
+
+    int y[3];
+    y[0]=p;y[1]=q; y[2]= r;
+    z = *min_element(y,y+3);
+    cout<<z<<endl;
+
+    if(z==0)
+        return 0;
+    else
+    {for(i=0;i<z;i++)
+    cout<<a[i]<<" "<<b[i]<<" "<<c[i]<<endl;
+    }
+
+
+
+    return 0;
+}
+ 
