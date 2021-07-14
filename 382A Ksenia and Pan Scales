@@ -1,0 +1,32 @@
+
+//BISMILLAHIR RAHMANIR RAHIM
+
+#include<bits/stdc++.h>
+using namespace std;
+#define optimize() ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+#define  endl '\n'
+int main()
+{
+    optimize();
+
+    string s,t,l,r;
+
+    cin>>s>>t;
+    int x = s.find('|');
+
+    l = s.substr(0,x);
+    r = s.substr(x+1,s.size());
+    //Or I can write r = s.substr(x+1) as the sub string is from x+1 to
+    //the end of the string s
+
+    for(auto u:t)
+    {
+        if(l.size()<=r.size()) l +=u;
+        else  r += u;
+    }
+
+    cout<<(l.size()==r.size()?(l + "|" + r) : "Impossible")<<endl;
+
+    return 0;
+}
+
