@@ -1,0 +1,29 @@
+
+//BISMILLAHIR RAHMANIR RAHIM
+
+#include<bits/stdc++.h>
+using namespace std;
+#define optimize() ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+#define  endl '\n'
+int main()
+{
+    optimize();
+    bool p = true;
+    int n,x;
+    cin>>n>>x;
+
+    while(n--)
+    {
+        int a,b;
+        cin>>a>>b;
+
+        if(x==a || x==b||x==(7-a) || x==(7-b))
+            p = false;
+
+        x= 7-x;
+    }
+
+    cout<<(p? "YES" : "NO")<<endl;
+
+    return 0;
+}
