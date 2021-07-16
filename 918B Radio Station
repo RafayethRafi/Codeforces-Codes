@@ -1,0 +1,35 @@
+//BISMILLAHIR RAHMANIR RAHIM
+
+#include<bits/stdc++.h>
+using namespace std;
+#define optimize() ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+#define  endl '\n'
+int main()
+{
+    optimize();
+    int n,m,i;
+
+    cin>>n>>m;
+
+    map<string,string>ipname;
+
+    for(i=0;i<n;i++)
+    {
+        string name,ip;
+        cin>>name>>ip;
+
+        ipname[ip] = name;
+
+    }
+
+    while(m--)
+    {
+        string a,b;
+        cin>>a>>b;
+        b.pop_back();
+        cout<<a<<" "<<b<<"; #"<<ipname[b]<<endl;
+
+    }
+
+    return 0;
+}
