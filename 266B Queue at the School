@@ -1,0 +1,21 @@
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int a,b,i,j;
+    string s;
+    cin>>a>>b>>s;
+    for(i=0;i<b;i++)
+    {
+        for(j=0;j<a-1;j++)
+        {
+            if(s[j]=='B' && s[j+1]=='G')
+                {swap(s[j],s[j+1]);
+                j++;}
+        }
+    }
+    cout<<s<<endl;
+    return 0;
+
+}
