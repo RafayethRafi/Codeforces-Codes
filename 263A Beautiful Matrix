@@ -1,0 +1,31 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int a[5][5],i,j,x,y,z;
+    for(i=0;i<5;i++)
+        for(j=0;j<5;j++)
+    {cin>>a[i][j];
+    if(a[i][j]==1)
+    {
+        x = i;
+        y = j;
+    }
+    }
+    if(x>=0 && x<=2)
+        x = 2-x;
+    else  x = abs(2-x);
+
+    if(y>=0 && y<=2)
+        y = 2-y;
+    else y = abs(2-y);
+
+    z = x+y;
+
+    cout<<z<<endl;
+
+    return 0;
+
+
+
+}
