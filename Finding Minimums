@@ -1,0 +1,33 @@
+//BISMILLAHIR RAHMANIR RAHIM
+
+#include<bits/stdc++.h>
+using namespace std;
+#define optimize() ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+#define  endl '\n'
+int main()
+{
+    optimize();
+
+    int k,n,x=INT_MAX , p,q=0,i;
+    cin>>n>>k;
+
+    for(i=0;i<n;i++)
+    {
+       cin>>p;
+       if(p<x)
+       x=p;
+       q++;
+       if(q==k)
+       {
+           cout<<x<<" ";
+           x = INT_MAX;
+           q=0;
+       }
+       else if(i==(n-1))
+        cout<<x<<endl;
+    }
+
+    return 0;
+}
+
+
