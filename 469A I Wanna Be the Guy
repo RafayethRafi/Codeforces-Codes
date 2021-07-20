@@ -1,0 +1,86 @@
+//BOTH CODES ARE ACCEPTED!!
+
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n,x,y,i,flag=1;
+    cin>>n;
+    int c[n+5];
+
+    memset(c,0,sizeof(c));
+    cin>>x;
+    int a[x+5];
+    for(i=1;i<=x;i++)
+        {cin>>a[i];
+        c[a[i]]++;
+        }
+    cin>>y;
+    int b[y+5];
+   for(i=1;i<=y;i++)
+   {
+       cin>>b[i];
+       c[b[i]]++;
+   }
+
+   for(i=1;i<=n;i++)
+   {
+       if(c[i]==0)
+        flag =0;
+   }
+
+   if(flag==0)
+    cout<<"Oh, my keyboard!"<<endl;
+   else
+   cout<<"I become the guy."<<endl;
+
+
+   return 0;
+
+}
+
+
+
+
+
+//BISMILLAHIR RAHMANIR RAHIM
+
+#include<bits/stdc++.h>
+using namespace std;
+#define optimize() ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+#define  endl '\n'
+int main()
+{
+    optimize();
+    set<int>s;
+    int n;
+    cin>>n;
+
+    int x;
+    cin>>x;
+
+    while(x--)
+    {
+        int a;
+        cin>>a;
+        s.insert(a);
+    }
+
+    cin>>x;
+
+    while(x--)
+    {
+        int a;
+        cin>>a;
+        s.insert(a);
+    }
+
+    if(s.size()==n)
+        cout<<"I become the guy."<<endl;
+    else cout<<"Oh, my keyboard!"<<endl;
+
+
+    return 0;
+}
+
