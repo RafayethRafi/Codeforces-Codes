@@ -1,0 +1,31 @@
+
+//BISMILLAHIR RAHMANIR RAHIM
+
+#include<bits/stdc++.h>
+using namespace std;
+#define optimize() ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+#define  endl '\n'
+int main()
+{
+    optimize();
+
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int n,c1,c2;
+        cin>>n;
+
+        int x = round(n/3.00);
+
+        c2 = x;
+        c1 = (n-(2*x));
+
+        int p = abs(c1-c2);
+
+        cout<<c1<<" "<<c2<<endl;
+
+    }
+
+    return 0;
+}
