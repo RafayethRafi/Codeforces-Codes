@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    string s;
+    cin>>s;
+    int  x= s.size(),i,cntl=0,cntu=0;
+    for(i=0;i<x;i++)
+    {
+        if(s[i]>='a' && s[i]<='z')
+            cntl++;
+        else
+            cntu++;
+    }
+    if(cntu>cntl)
+    {
+        for(i=0;i<x;i++)
+        s[i]= toupper(s[i]);
+    }
+    else
+    {
+        for(i=0;i<x;i++)
+            s[i]= tolower(s[i]);
+    }
+    cout<<s<<endl;
+    return 0;
+}
