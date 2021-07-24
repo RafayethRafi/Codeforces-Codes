@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n,i,even=0,odd=0,pose,poso;
+    cin>>n;
+    int a[n];
+    for(i=0;i<n;i++)
+    {
+        cin>>a[i];
+        if(a[i]%2==0)
+            {even++;
+            pose =i;
+            }
+        else
+            {odd++;
+            poso = i;
+            }
+
+    }
+    if(even>odd)
+        cout<<poso+1<<endl;
+    else
+        cout<<pose+1<<endl;
+
+    return 0;
+}
