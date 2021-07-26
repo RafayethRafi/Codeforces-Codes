@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int k,l,m,n,d,i,cnt=0;
+    cin>>k>>l>>m>>n>>d;
+    int a[100005];
+    memset(a,0,sizeof(a));
+    for(i=1;i<=d;i++)
+    {
+        if(i%k==0|| i%l==0||i%m==0||i%n==0)
+            a[i]=1;
+    }
+     for(i=1;i<=d;i++)
+    {
+        if(a[i]==0)
+            cnt++;
+    }
+    cout<<d-cnt<<endl;
+
+    return 0;
+
+}
