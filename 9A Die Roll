@@ -1,0 +1,20 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+   int a,b,p;
+   cin>>a>>b;
+
+   int x = max(a,b);
+
+   int y = 6-x +1;
+
+
+   int r = __gcd(y,6);
+
+   cout<<y/r<<"/"<<6/r<<endl;
+
+   return 0;
+
+
+}
