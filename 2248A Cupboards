@@ -1,0 +1,28 @@
+
+//BISMILLAHIR RAHMANIR RAHIM
+
+#include<bits/stdc++.h>
+using namespace std;
+#define optimize() ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+#define  endl '\n'
+int main()
+{
+    optimize();
+
+    int n,i,a=0,b=0,c=0,d=0;
+    cin>>n;
+    int x[n],y[n];
+    for(i=0;i<n;i++)
+    {
+        cin>>x[i];
+        if(x[i]==0) a++;
+        else b++;
+        cin>>y[i];
+        if(y[i]==0) c++;
+        else d++;
+
+    }
+    cout<<min(a,b)+min(c,d)<<endl;
+
+    return 0;
+}
