@@ -1,0 +1,14 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n,t,k,d;
+
+    cin>>n>>t>>k>>d;
+
+    double x = (double)n/k;
+    int y = (ceil(x));
+    if((y*t)>(d+t))
+        cout<<"YES"<<endl;
+    else cout<<"NO"<<endl;
+}
