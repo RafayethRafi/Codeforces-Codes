@@ -1,0 +1,39 @@
+
+//BISMILLAHIR RAHMANIR RAHIM
+
+#include<bits/stdc++.h>
+using namespace std;
+#define optimize() ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+#define  endl '\n'
+int main()
+{
+    optimize();
+
+    int n,t,i;
+    cin>>n>>t;
+    string s;
+
+    if(t==10 && n==1)
+    {
+        cout<<"-1"<<endl;
+        return 0;
+    }
+    if(t==10)
+    {
+        s+= '1';
+
+    }
+    else
+    {
+        char c = (t+'0');
+        s += c;
+    }
+
+    for(int i=1;i<n;i++)
+        s += '0';
+
+    cout<<s<<endl;
+
+    return 0;
+}
+
