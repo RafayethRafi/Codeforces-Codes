@@ -1,0 +1,75 @@
+//BOTH ACCEPTED
+
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {int n,i,y;
+    int a[105],b[105];
+    cin>>n;
+    memset(b,0,sizeof(b));
+
+
+    for(i=1;i<=n;i++)
+        {cin>>a[i];
+        b[a[i]]++;}
+
+        for(i=1;i<=n;i++)
+        {
+            if(b[a[i]] == 1)
+                y =i;
+        }
+
+        cout<<y<<endl;
+    }
+
+
+}
+
+
+
+
+
+
+//Bismillahir Rahmanir Rahim
+//One day you'll leave this world behind
+//So live a life you'll remember!
+//A. Free Ice Cream
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t,n,pos=1;
+    cin >> t;
+    while(t--)
+    {
+        cin >> n;
+        int a[n+5];
+
+        for(int i=1; i<=n; i++)
+        {
+            cin >> a[i];
+        }
+
+        for(int i=1; i<=n-1; i++)
+        {
+            for(int j=i+1; j<=n; j++)
+            {
+                if(a[i]!=a[j])
+                {
+                    pos = i;
+                }
+            }
+        }
+        if(pos==(n-1)&& a[n-1]==a[n-2])
+            pos = n;
+
+        cout << pos << endl;
+
+    }
+    return 0;
+}
