@@ -1,0 +1,49 @@
+
+
+//Bismillahir Rahmanir Rahim
+
+#include<bits/stdc++.h>
+using namespace std;
+
+#define optimize() ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+
+int main()
+{
+    optimize();
+    int n;
+    cin>>n;
+    vector<pair<string,string>> v;
+
+    while(n--)
+    {
+        string a,b;
+        cin>>a>>b;
+        pair<string,string>p;
+        p.first = a;
+        p.second = b;
+        v.push_back(p);
+
+    }
+    for(auto u:v)
+    {
+        if(u.second == "rat") cout<<u.first<<endl;
+    }
+
+    for(auto u:v)
+    {
+        if(u.second == "woman"|| u.second=="child") cout<<u.first<<endl;
+    }
+    for(auto u:v)
+    {
+        if(u.second == "man") cout<<u.first<<endl;
+    }
+    for(auto u:v)
+    {
+        if(u.second == "captain") cout<<u.first<<endl;
+    }
+
+    return 0;
+}
+
+
+//https://codeforces.com/contest/63/problem/A?fbclid=IwAR3F9nW9Y1G5__Llq7kcP2rNlbrLWnqzkRCylNJBR8qbM5n232cudCxaG2k
