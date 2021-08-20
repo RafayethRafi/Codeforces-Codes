@@ -1,0 +1,42 @@
+//https://codeforces.com/contest/415/problem/A?fbclid=IwAR2elzsHK0sxVNFYsuDm8uxvHvMIgLY0LcuvyWx9vUsiHpxk7lyFiTrKqV0
+
+
+#include<bits/stdc++.h>
+using namespace std;
+#define endl '\n'
+#define optimize() ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+int main()
+{
+    optimize();
+
+    int n,m,i;
+    cin>>n>>m;
+    int a[n+5];
+    int mx=n,f=1;
+
+    while(m--)
+    {
+        int x;
+        cin>>x;
+
+        if(f)
+        {
+            a[n]= x;
+            f =0;
+        }
+
+        if(x<mx)
+        {
+            for(i=x;i<mx;i++)
+            a[i]= x;
+
+                mx =x;
+        }
+
+    }
+    for(i=1;i<=n;i++)
+        cout<<a[i]<<" ";
+
+    return 0;
+}
+
