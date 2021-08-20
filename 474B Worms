@@ -1,0 +1,54 @@
+//https://codeforces.com/problemset/problem/474/B
+
+
+#include<bits/stdc++.h>
+using namespace std;
+#define endl '\n'
+#define optimize() ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+\
+const int mx = 1e5+123;
+int a[mx];
+int l[mx];
+int r[mx];
+
+int main()
+{
+    optimize();
+
+    int n,last = 0;
+    cin>>n;
+
+    for(int i=1;i<=n;i++)
+        {
+            cin>>a[i];
+            l[i] = last +1;
+            r[i] = last + a[i];
+            last = r[i];
+        }
+
+        int m;
+        cin>>m;
+        while(m--)
+        {
+            int q;
+            cin>>q;
+
+            int L = 1,R = n;
+
+            while(L<=R)
+            {
+                int mid = (L+R)>>1;
+                if(q>=l[mid] && q<=r[mid])
+                {
+                    cout<<mid<<endl;
+                    break;
+                }
+                if(q>r[mid]) L = mid+1;
+                else R = mid-1;
+            }
+
+        }
+
+
+    return 0;
+}
