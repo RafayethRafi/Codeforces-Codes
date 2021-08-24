@@ -1,0 +1,25 @@
+//https://codeforces.com/problemset/problem/151/A
+
+
+#include<bits/stdc++.h>
+using namespace std;
+#define endl '\n'
+#define optimize() ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+int main()
+{
+    optimize();
+    int n,k,l,c,d,p,nl,np,x,y,z;
+    cin>>n>>k>>l>>c>>d>>p>>nl>>np;
+
+    x = (k*l)/nl;
+    y = c*d;
+    z = p/np;
+
+    int r = min(x,y);
+    int h = min(r,z);
+
+    cout<<(h/n)<<endl;
+
+    return 0;
+}
+
