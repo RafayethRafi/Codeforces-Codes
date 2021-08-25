@@ -1,0 +1,34 @@
+//https://codeforces.com/contest/525/problem/A?fbclid=IwAR02jsCGTmPao9wHGWjn5sD5GIxP4JXKaEVIZfPGdXQU8RDSaaF6_jP1D94
+
+
+#include<bits/stdc++.h>
+using namespace std;
+#define endl '\n'
+#define optimize() ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+int main()
+{
+    optimize();
+    int n,cnt=0,i;
+    cin>>n;
+    string s;
+    cin>>s;
+
+    map<char,int> m;
+
+    for(i=0;i<s.size();i++)
+    {
+        if(i%2==0)
+            m[s[i]]++;
+        else
+        {
+            char c = s[i] + 32;
+            if(m[c]==0)
+                cnt++;
+             else
+                m[c]--;
+        }
+    }
+    cout<<cnt<<endl;
+
+    return 0;
+}
