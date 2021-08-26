@@ -1,0 +1,30 @@
+//https://codeforces.com/contest/551/problem/A?fbclid=IwAR2E7C3DIGN010CRB9yGMXhVJo-OGchhtJ4SKp0qoVHXI511T-75HETIbcM
+
+
+#include<bits/stdc++.h>
+using namespace std;
+#define endl '\n'
+#define optimize() ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+int main()
+{
+    optimize();
+    int n,i,j;
+    cin>>n;
+    int a[n];
+    for(i=0;i<n;i++) cin>>a[i];
+
+    for(i=0;i<n;i++)
+    {
+        int k=1;
+
+        for(j=0;j<n;j++)
+        {
+            if(a[i]<a[j])
+                k++;
+        }
+        cout<<k<<" ";
+    }
+    cout<<endl;
+
+    return 0;
+}
