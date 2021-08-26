@@ -1,0 +1,30 @@
+//https://codeforces.com/contest/1562/problem/A
+
+#include<bits/stdc++.h>
+using namespace std;
+#define endl '\n'
+#define optimize() ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+int main()
+{
+    optimize();
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        long long l,r,mid;
+        cin>>l>>r;
+        if(l==r) cout<<"0"<<endl;
+        else
+        {
+                mid = (r/2) + 1;
+               if(l>mid)
+                cout<<(r%l)<<endl;
+               else
+                cout<<(r%mid)<<endl;
+
+        }
+        }
+
+    return 0;
+}
+ 
